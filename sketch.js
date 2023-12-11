@@ -1,18 +1,12 @@
 let bgImage; // Variable to store the background image
 
-// let textOptions = [
-//   { text: "*", size: random(3,36) },
-//   { text: "*", size: random(3,36) },
-//   { text: "*", size: random(3,36) },
-//   { text: "*", size: random(3,36) },
-//   { text: "*", size: random(3,36) },
-//   { text: "*", size: random(3,36) },
-//   { text: "TTI", size: 12 },
-//   { text: "myVeeva", size: 12 },
-//   { text: "DisQover", size: 12 },
-//   { text: "MaVric", size: 12 },
-//   { text: "*", size: random(3,36) }
-// ]; // Array of text options with sizes
+let textOptions = [
+   { text: "TTI", size: 36 },
+   { text: "myVeeva", size: 22 },
+   { text: "DisQover", size: 22 },
+   { text: "MaVric", size: 22 },
+   { text: "Enrollment Forecaster", size: 22 }
+ ]; // Array of text options with sizes
 
 let snowflakes = []; // array to hold snowflake objects
 
@@ -23,7 +17,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(900, 500);
+  createCanvas(1900, 1050);
   //fill(240);
   noStroke();
   // Draw the image, resizing it to fit the canvas
@@ -58,15 +52,17 @@ function snowflake() {
   this.posY = random(-50, 0);
   this.initialangle = random(0, 2 * PI);
 // Choose mostly '*' and occasionally 'Merry Xmas'
-  if (random(1) < 0.99) { // 95% probability of '*'
+  if (random(1) < 0.95) { // 95% probability of '*'
     this.text = '*';
     this.size = random(3, 36); // Random size between 18 and 32
     this.color = color("white")
   } else { // 5% probability of 'Merry Xmas'
-    this.text = 'Merry Holidays';
-    this.size = 18; // Fixed size for 'Merry Xmas'
+    let textOption = random(textOptions);
+    this.text = textOption.text;
+    this.size = textOption.size; // Fixed size for 'Merry Xmas'
     this.color = color("rgb(26,26,225)")
   }
+
 
   // radius of snowflake spiral
   // chosen so the snowflakes are uniformly spread out in area
