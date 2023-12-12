@@ -1,11 +1,20 @@
 let bgImage; // Variable to store the background image
 
 let textOptions = [
-   { text: "TTI", size: 36 },
+   { text: "TTI", size: 48 },
    { text: "myVeeva", size: 22 },
    { text: "DisQover", size: 22 },
    { text: "MaVric", size: 22 },
-   { text: "Enrollment Forecaster", size: 22 }
+   { text: "JARVIS", size: 22 },
+   { text: "Enrollment Forecaster", size: 22 },
+   { text: "HcH", size: 22 },
+   { text: "E2E Digital Study", size: 22 },
+   { text: "NextGenQMS", size: 22 },
+   {text: "Smart Study Design", size: 22 },
+   {text: "Data Standards", size: 22 },
+   {text: "iGrafx", size: 22 },
+   {text: "Navigator", size: 22 },
+  {text: "CTMS", size: 22}
  ]; // Array of text options with sizes
 
 let snowflakes = []; // array to hold snowflake objects
